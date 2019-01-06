@@ -1,4 +1,4 @@
-﻿記錄編譯 cef 3.3626 (Chrome Dev 72.0.3626.28) 帶 FFmpeg (H.264/AAC 解碼器) for win32 過程
+﻿編譯 cef 3.3626 (Chrome Dev 72.0.3626.28) 帶 FFmpeg (H.264/AAC 解碼器) for win32 過程
 =======
 
 `Chromium Embedded Framework` 主要提供 Hybrid Desktop APP (Web + Native) 的解決方案，這邊註解下編譯 `cef 3.3626 (Chrome Dev 72.0.3626.28)` 的過程，並附上 FFmpeg 所支持的編譯結果 `cef_binary_3.3626.1866.g0e1d6c6_windows32.part01~3.rar`。
