@@ -5,7 +5,7 @@
 
 100Mbps 網速下載 Source Code 約 2 小時，i7-4790k 上編譯 Debug 與 Release 32位元約 10 小時，所產出的資料夾大小約 83.8GB，檔案數約 70 萬個。
 
-為何 `cef` 而不是 `Electron` 或 `QtWebEngine`，可以參考 [跨平台解决方案中，Qt 和 Electron 孰优孰劣？ - 欲三更的回答 - 知乎](https://www.zhihu.com/question/53230344/answer/134672896)。
+為何 `cef` 而不是 `Electron` 或 `QtWebEngine`，可以參考 [跨平台解决方案中，Qt 和 Electron 孰优孰劣？ - 欲三更的回答 - 知乎](https://www.zhihu.com/question/53230344/answer/134672896)。另外 [CEF Automated Builds](http://opensource.spotify.com/cefbuilds/index.html) 官方預編好的是不帶 FFmpeg (H.264/AAC 解碼器)，僅支援 VP8/VP9，對於 H.264/AAC 則無法解碼。
 
 由於 CSDN 已有眾多編譯的結果，但無奈沒有積分無法下載，於是花了點時間硬幹了一下。建議在硬幹前先詳細觀察下列的文章，尤其是 `BranchesAndBuilding` ，裡頭詳細記載 cef 搭配的 VisualStudio 與其 SDK 版本號。
 
