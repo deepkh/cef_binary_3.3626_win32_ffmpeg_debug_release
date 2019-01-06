@@ -1,9 +1,9 @@
-﻿cef 3.3626 (Chrome Dev 72.0.3626.28) 加入 FFmpeg (H.264/AAC 解碼器) 的編譯過程
+﻿記錄: 編譯 cef 3.3626 (Chrome Dev 72.0.3626.28) 帶 FFmpeg (H.264/AAC 解碼器) 過程
 =======
 
-`Chromium Embedded Framework` 主要提供 Hybrid Desktop APP (Web + Native) 的解決方案，這邊註解下編譯 `cef 3.3626 (Chrome Dev 72.0.3626.28)` 的過程，並附上 FFmpeg 所支持的編譯結果 `cef_binary_3.3626.1866.g0e1d6c6_windows32.part01~3.rar`。
+`Chromium Embedded Framework` 主要提供 Hybrid Desktop APP (Web + Native) 的解決方案，這邊註解下編譯 `cef 3.3626 (Chrome Dev 72.0.3626.28)` 的過程，並附上 FFmpeg 所支持的編譯結果 `cef_binary_3.3626.1866.g0e1d6c6_windows32.part01~3.rar`。100Mbps 網速下載 Source Code 約 2 小時，在 i7-4790k 上編譯 Debug 與 Release 約 10 小時，所產出的資料夾大小約 83.8GB，檔案數約 70 萬個。
 
-為何 `cef` 而不是 `Electron` 或 `QtWebEngine`，這邊與 [跨平台解决方案中，Qt 和 Electron 孰优孰劣？ - 欲三更的回答 - 知乎](https://www.zhihu.com/question/53230344/answer/134672896) 的見解差不多。
+為何 `cef` 而不是 `Electron` 或 `QtWebEngine`，可以參考 [跨平台解决方案中，Qt 和 Electron 孰优孰劣？ - 欲三更的回答 - 知乎](https://www.zhihu.com/question/53230344/answer/134672896)。
 
 由於 CSDN 已有眾多編譯的結果，但無奈沒有積分無法下載，於是花了點時間硬幹了一下。建議在硬幹前先詳細觀察下列的文章，尤其是 `BranchesAndBuilding` ，裡頭詳細記載 cef 搭配的 VisualStudio 與其 SDK 版本號。
 
@@ -27,13 +27,13 @@
   
 *	**Nijina-1.8.2 for windows 下載並放置於 C:\Ninja\nijia.exe，並加入 %PATH%**
     
-*	**建立 D:\cef 資料夾**
+*	**建立 D:\gws\cef 資料夾**
     
-*	**下載 automate-git.py 並置於 D:\cef**
+*	**下載 automate-git.py 並置於 D:\gws\cef**
   
-*	**下載下列 build_3626.bat 並置於 D:\cef**
+*	**下載 build_3626.bat 並置於 D:\gws\cef**
 
-*	**開啟 cmd.exe，並執行 D:\cef\build_3626.bat**
+*	**執行 cmd.exe，並 cd D:\gws\cef\，然後執行 build_3626.bat**
   
 
 build_3626.bat
@@ -45,7 +45,7 @@ build_3626.bat
 	set GYP_MSVS_VERSION=2017
 	set CEF_ARCHIVE_FORMAT=tar.bz2
 	set GN_ARGUMENTS=--ide=vs2017 --sln=cef --filters=//cef/*
-	python automate-git.py --download-dir=D:\cef\build_3626 --branch=3626 --force-build --force-clean --minimal-distrib --client-distrib
+	python automate-git.py --download-dir=D:\gws\cef\build_3626 --branch=3626 --force-build --force-clean --minimal-distrib --client-distrib
 
 *	**proprietary_codecs=true ffmpeg_branding=Chrome**
   
