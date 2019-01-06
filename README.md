@@ -1,7 +1,9 @@
-﻿記錄: 編譯 cef 3.3626 (Chrome Dev 72.0.3626.28) 帶 FFmpeg (H.264/AAC 解碼器) 過程
+﻿記錄編譯 cef 3.3626 (Chrome Dev 72.0.3626.28) 帶 FFmpeg (H.264/AAC 解碼器) 過程
 =======
 
-`Chromium Embedded Framework` 主要提供 Hybrid Desktop APP (Web + Native) 的解決方案，這邊註解下編譯 `cef 3.3626 (Chrome Dev 72.0.3626.28)` 的過程，並附上 FFmpeg 所支持的編譯結果 `cef_binary_3.3626.1866.g0e1d6c6_windows32.part01~3.rar`。100Mbps 網速下載 Source Code 約 2 小時，在 i7-4790k 上編譯 Debug 與 Release 約 10 小時，所產出的資料夾大小約 83.8GB，檔案數約 70 萬個。
+`Chromium Embedded Framework` 主要提供 Hybrid Desktop APP (Web + Native) 的解決方案，這邊註解下編譯 `cef 3.3626 (Chrome Dev 72.0.3626.28)` 的過程，並附上 FFmpeg 所支持的編譯結果 `cef_binary_3.3626.1866.g0e1d6c6_windows32.part01~3.rar`。
+
+100Mbps 網速下載 Source Code 約 2 小時，i7-4790k 上編譯 Debug 與 Release 約 10 小時，所產出的資料夾大小約 83.8GB，檔案數約 70 萬個。
 
 為何 `cef` 而不是 `Electron` 或 `QtWebEngine`，可以參考 [跨平台解决方案中，Qt 和 Electron 孰优孰劣？ - 欲三更的回答 - 知乎](https://www.zhihu.com/question/53230344/answer/134672896)。
 
